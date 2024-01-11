@@ -1,0 +1,241 @@
+@import url('General.css');
+
+.top-header{
+    top: 0;
+    width: 100%;
+    z-index: 997;
+    position: fixed;
+}
+
+.top{
+    background-color: var(--beige-color);
+    color: var(--white-color);
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    border-bottom: 1px dotted #ccc;
+}
+
+
+.header.sticky {
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(16px);
+    background-color: var(--header-background-color);
+    transition: var(--transition2);
+    border-bottom: 1px dotted #ccc;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.logo{
+    font-size: 28px;
+}
+
+.search-input-header{
+    border: none;
+    padding: 7px 5px 7px 15px;
+    width: 18rem;
+    margin-right: 10px;
+    margin-top: 2px;
+    color: var(--secundary-color);
+    background-color: var( --background-color);
+    border: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.search-input-header:focus{
+    outline: none;
+}
+
+.nav-list {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: 100;
+}
+
+.nav-list li{
+    cursor: pointer;
+}
+
+.nav-li-text{
+    transition: var(--transition);
+    padding: 5px 0;
+}
+
+.nav-li-text:hover{
+    border-bottom: 2px solid var(--primary-color) ;
+}
+
+.icon-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.icon-shopping{
+    position: relative;
+}
+
+.products-in-cart{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--beige-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: 0.6rem;
+}
+
+/* Search */
+
+.search-input-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    width: 100%;
+    padding: 50px 50px 0 50px;
+    height: 85vh;
+    position: absolute;
+    top: -85vh;
+    opacity: 0;
+    right: 0;
+    left: 0;
+    transition: var(--transition2);
+}
+
+.search-input-content.active{
+    top: 0;
+    opacity: 1;
+    border-bottom: 1px solid var(--border-color2);
+}
+
+
+.search-input-content .input-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.close-input-icon{
+    width: auto;
+    height: 40px;
+}
+
+.search-input{
+    padding: 0px 5px 0px 15px;
+    color: var(--secundary-color);
+    width: 95%;
+    height: 50px;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--border-color3);
+    transition: var(--transition);
+}
+
+.search-input.active{
+    background-color: var(--background-color2);
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.search-icon-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 38px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.section-product-results{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 95%;
+    height: 70%;
+    margin-top: 20px;
+}
+
+.section-product-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.section-product-header:hover{
+    background-color:rgba(0, 0, 0, .028);
+}
+
+.section-product-header:hover .product-title-header{
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.image-content-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:rgba(0, 0, 0, .028);
+}
+
+.product-image-header{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: multiply;
+}
+
+.product-title-header{
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 100;
+}

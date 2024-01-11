@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #3c4856;
+    --secundary-color: rgba(20, 21, 34, 0.8);
+    --beige-color: rgba(206, 173, 107);
+    --beige-color-2: rgba(206, 173, 107, 0.3);
+    --background-color: rgba(194, 194, 194, 0.2);
+    --background-color2:rgba(212, 210, 210, 0.2);
+    --header-background-color: rgba(255, 255, 255, 0.8);
+    --category-color: rgba(71, 55, 79, 0.7);
+    --light-color: rgba(194, 194, 194, 0.1);
+    --white-color: #fff;
+    --black-color: #141522;
+    --border-color: rgba(194, 194, 194, 0.5);
+    --border-color2: rgb(163, 163, 163);
+    --border-color3: rgba(194, 194, 194, 0.4);
+    --box-shadow: rgba(132, 132, 132, 0.2) 0px 2px 8px 0px;
+    --box-shadow2:  0px 3px 4px rgba(149, 157, 165, 0.5);
+    --transition: 0.2s ease-in-out;
+    --transition2: 0.3s ease-in-out;
+    --border-radius: 3px;
+    --border-radius2: 5px;
+}

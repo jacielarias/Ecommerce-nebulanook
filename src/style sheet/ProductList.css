@@ -1,0 +1,119 @@
+@import url('General.css');
+
+.content-products{
+    width: 100%;
+    padding: 50px 0;
+    transition: transform 0.3s ease;
+}
+
+.content-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-product{
+    position: relative;
+    height: 600px;
+    width: 400px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    /*border: 1px solid  var(--border-color3);*/
+}
+
+.image-content{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    background-color:rgba(0,0,0,.028);
+    cursor: pointer;
+}
+
+.category-product{
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    background-color: var(--primary-color);
+    width: 50%;
+    margin-bottom: 5px;
+    font-size: 0.6rem;
+    text-align: left;
+    color: var(--white-color);
+    padding: 8px  10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-image{
+    width: 75%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: multiply;
+}
+
+.description-product{
+    position: absolute;
+    bottom: 17%;
+    width: 90%;
+}
+
+.product-title{
+    padding: 0 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--secundary-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-title:hover{
+    text-decoration: underline;
+}
+
+.product-price{
+    color: var(--primary-color);
+    font-size: 0.9em;
+    text-align: left;
+    padding: 15px 10px 10px 10px;
+}
+
+.add-to-cart-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-to-cart{
+    position: absolute;
+    bottom: 28%;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--beige-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 2px 1px 5px #ccc;
+}
+
+.icon-add-to-cart{
+    stroke: #fff;
+}

@@ -1,0 +1,17 @@
+@import url('General.css');
+
+.item-select-size{
+    padding: 7px 5px;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    color: #141522;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    font-size: 0.7rem;
+    width: 80px;
+}
+
+.item-select-size:focus{
+    outline: none;
+}

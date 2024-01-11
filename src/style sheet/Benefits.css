@@ -1,0 +1,58 @@
+@import url('General.css');
+
+.benefits{
+    width: 90%;
+    padding:  100px 0;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.benefits-title{
+    font-size: 5rem;
+    color: var(--secundary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.benefits-title::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    bottom: 0;
+    left: 5px;
+    background-color: var(--beige-color);
+}
+
+.our-benefits{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 7em;
+    padding:  100px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.benefit-content {
+    width: 33.33%;
+    height: 200px;
+}
+
+.benefit-content img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.benefit-content h3{
+    margin-bottom: 20px;
+    color: var(--secundary-color);
+}
+
+.benefit-content p{
+   font-weight: 100;
+   color: var(--category-color);
+   font-weight: 0.9rem;
+}

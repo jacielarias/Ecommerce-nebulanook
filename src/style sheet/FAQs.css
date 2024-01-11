@@ -1,0 +1,110 @@
+@import url('General.css');
+
+.FAQs-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 30px;
+    margin-top: 50px;
+
+  }
+
+  .FAQs-content img{
+    width: 40%;
+    height: auto;
+  }
+
+  .FAQs-accordion-content{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    position: relative;
+  }
+
+  .FAQs-accordion-content h2{
+    font-size: 5em;
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  .FAQs-accordion-content h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 50px;
+    background-color: var(--beige-color);
+  }
+  
+  .item {
+    /*box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);*/
+    padding: 30px 24px;
+    padding-right: 48px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--secundary-color);
+    background-color: var(--white-color);
+  
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 24px;
+    row-gap: 10px;
+    align-items: center;
+  }
+  
+  .number {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  
+  .title,
+  .icon {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: var(--secundary-color);
+  }
+  
+  .content-box {
+    grid-column: 2 / -1;
+    padding-bottom: 16px;
+    line-height: 1.6;
+    display: none;
+  }
+
+  .content-box.content-box--active{
+    display: flex;
+  }
+  
+  .content-box ul {
+    color: var(--secundary-color);
+    margin-left: 16px;
+    margin-top: 16px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* OPEN STATE */
+  .open {
+    border-top: 2px solid var(--beige-color);
+    border-bottom: 2px solid var(--beige-color);
+  }
+  
+  .open .number,
+  .open .title {
+    color:  var(--beige-color);
+  }
+
+
+
+  

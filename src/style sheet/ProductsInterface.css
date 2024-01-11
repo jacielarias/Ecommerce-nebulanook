@@ -1,0 +1,7 @@
+.interface-content{
+    padding: 80px 0  0 0 ;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
