@@ -36,6 +36,14 @@ function Header({
     },
   ];
 
+  const handleNavLinkClick = (id) => (event) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(id);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
     <div className={isSticky ? "top-header sticky" : "top-header"}>
@@ -53,9 +61,9 @@ function Header({
       {/*----- Nav header -----*/}
         <nav className="nav-icons">
           <ul className="nav-list">
-            <li className="nav-li-text">Contact</li>
-            <li className="nav-li-text">Benefits</li>
-            <li className="nav-li-text">FAQs</li>
+            <a href="#contact" className="nav-li-text"  onClick={handleNavLinkClick("contact")}>Contact</a>
+            <a href="#benefits" className="nav-li-text"  onClick={handleNavLinkClick("benefits")}>Benefits</a>
+            <a href="#faqs" className="nav-li-text"  onClick={handleNavLinkClick("faqs")}>FAQs</a>
             <li>
               <i className="search-icon-content" onClick={() => toggleInput()}>
                 <img className="search-icon-header" src={searchIcon} alt="Search product" />

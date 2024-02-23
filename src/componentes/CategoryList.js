@@ -40,22 +40,25 @@ function CategoryList({
                 ))}
               </ul>
             </section>
-            <div className='view-type'>
-              <div
-                className={`icon-view ${displayInterface === 'interface#1' ? 'icon-view--active': ''}`} 
-                onClick={()=> displayInterfaceProduct('interface#1')}
-                title='Grid view'
-              >
-                <img src={grid} />
+            <section className='view-type--content'>
+              <h3>Vista</h3>
+              <div className='view-type'>
+                <div
+                  className={`icon-view ${displayInterface === 'interface#1' ? 'icon-view--active': ''}`} 
+                  onClick={()=> displayInterfaceProduct('interface#1')}
+                  title='Grid view'
+                >
+                  <img src={grid} />
+                </div>
+                <div 
+                  className={`icon-view ${displayInterface === 'interface#2' ? 'icon-view--active': ''}`} 
+                  onClick={()=> displayInterfaceProduct('interface#2')}
+                  title='List view'
+                >
+                  <img src={list} />
+                </div>
               </div>
-              <div 
-                className={`icon-view ${displayInterface === 'interface#2' ? 'icon-view--active': ''}`} 
-                onClick={()=> displayInterfaceProduct('interface#2')}
-                title='List view'
-              >
-                <img src={list} />
-              </div>
-            </div>
+            </section>
 
         </section>
       </nav>

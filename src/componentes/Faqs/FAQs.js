@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LazyLoadedImage from '../LazyLoading';
 import FaqsItem from "./FaqsItem";
 import '../../style sheet/FAQs.css'
 
@@ -23,8 +24,8 @@ function Faqs () {
   ];
 
   return (
-    <div className="FAQs-content">
-      <img src={FAQsImage} />
+    <div id="faqs" className="FAQs-content">
+      l<LazyLoadedImage className={`image-faqs`} src={FAQsImage} alt='FAQs' />
         <div className="FAQs-accordion-content"> 
           <h2>FAQs</h2>
           {faqs.map((item, i) => (

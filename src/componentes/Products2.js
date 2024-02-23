@@ -1,6 +1,7 @@
-import '../style sheet/ProductList2.css'
+import '../style sheet/ProductList2.css';
+import LazyLoadedImage from './LazyLoading';
 
-function Products2({ openModalProduct, filteredProducts }) {
+function Products2({ openModalProduct, filteredProducts, customClassName }) {
 
     return (
         <div className='content-products--2'>
@@ -11,7 +12,7 @@ function Products2({ openModalProduct, filteredProducts }) {
                             <p className='category-product--2'>
                                 {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                             </p>
-                            <img className='product-image--2' src={product.image}  alt={product.title} />
+                            <LazyLoadedImage customClassName={customClassName} src={product.image} alt={product.title} />
                         </div>
                         <section className='desc-content'>
                             <div className='description-product--2'>

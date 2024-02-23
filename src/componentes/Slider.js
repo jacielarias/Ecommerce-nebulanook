@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import next from '../imagenes/arrow-right.svg';
 import prev from '../imagenes/arrow-left.svg';
 //Imágenes
+import slide0 from '../imagenes/slide0.jpg'
 import slide1 from '../imagenes/slide1.jpg';
 import slide2 from '../imagenes/slide2.jpg';
 import slide3 from '../imagenes/slide3.jpg';
@@ -31,8 +32,8 @@ const Slider = () => {
     const slides = [
       {
         id: 0,
-        url: slide1,
-        text: 'Your Style, Your Voice: Jaciel',
+        url: slide0,
+        text: 'Your Style, Your Voice',
         description: 'Find the Collection that Speaks for You',
       },
       {

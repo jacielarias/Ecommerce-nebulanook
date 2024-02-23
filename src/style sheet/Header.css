@@ -85,6 +85,8 @@ ul {
 .nav-li-text{
     transition: var(--transition);
     padding: 5px 0;
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .nav-li-text:hover{

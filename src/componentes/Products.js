@@ -1,7 +1,8 @@
 import '../style sheet/ProductList.css'
-import add from '../imagenes/plus.svg'
+import LazyLoadedImage from './LazyLoading';
+import add from '../imagenes/plus.svg';
 
-function Products({ openModalProduct, filteredProducts }) {
+function Products({ openModalProduct, filteredProducts, customClassName }) {
     //Filter products according to the selected category
     return (
         <div className='content-products'>
@@ -13,7 +14,7 @@ function Products({ openModalProduct, filteredProducts }) {
                             <p className='category-product'>
                                     {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                             </p>
-                            <img className='product-image' src={product.image} alt={product.title} />
+                            <LazyLoadedImage className={customClassName} src={product.image} alt={product.title} />
                         </div>
 
                         <div className='add-to-cart' title='Add to Cart' onClick={() => openModalProduct(product)}>

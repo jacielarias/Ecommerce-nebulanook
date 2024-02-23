@@ -9,11 +9,13 @@ function ProductsInterface ({displayInterface, openModalProduct, filteredProduct
         <div id="productsInterface" className='interface-content'>   
             {displayInterface === 'interface#1' && 
             <Products 
+                customClassName="product-image"
                 openModalProduct={openModalProduct}
                 filteredProducts={filteredProducts}  
             />}
             {displayInterface === 'interface#2' && 
             <Products2 
+                customClassName="product-image"
                 openModalProduct={openModalProduct}
                 filteredProducts={filteredProducts}
                 openDesciption={openDesciption}

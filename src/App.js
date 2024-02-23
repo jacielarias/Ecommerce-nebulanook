@@ -1,7 +1,6 @@
 //React
 import "./App.css";
 import "../src/style sheet/General.css"
-
 //Components
 import Ecommerce from './Ecommerce'
 

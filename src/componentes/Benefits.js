@@ -1,4 +1,4 @@
-import '../style sheet/Benefits.css'
+import '../style sheet/Benefits.css';
 
 import benefit1 from '../imagenes/benefit-1.svg'
 import benefit2 from '../imagenes/benefit-2.svg'
@@ -28,7 +28,7 @@ function Benefits (){
     ];
     
     return (
-        <section className="benefits">
+        <section id="benefits" className="benefits">
             <h2 className='benefits-title'>Our Benefits</h2>
             <div className='our-benefits'>
             {benefitsList.map((benefit) => (

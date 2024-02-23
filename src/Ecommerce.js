@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from 'react';
 // Components
 import CategoryList from "./componentes/CategoryList";
 import Header from "./componentes/Header";
@@ -9,6 +9,7 @@ import Promotions from "./componentes/Promotions";
 import Benefits from "./componentes/Benefits";
 import Slider from "./componentes/Slider";
 import Faqs from "./componentes/Faqs/FAQs";
+import Footer from "./componentes/Footer";
 
 
 function Ecommerce() {
@@ -30,26 +31,26 @@ function Ecommerce() {
     const [selectedProduct, setSelectedProduct] = useState(false);
     // Products Interface
     const [displayInterface, setDisplayInterface] = useState("interface#1");
+    //Consume API
+    async function useAPI(url, funcSetItems, errorMsj) {
+        useEffect(() => {
+        const fetchData = async () => {
+            try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.json();
+                funcSetItems(data.filter((product) => product.category !== 'electronics' && product !== 'electronics'));
+                    } catch (error) {
+                    console.error(errorMsj, error);
+                }
+            };
 
-  //Consume API
-  async function useAPI(url, funcSetItems, errorMsj) {
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          const data = await response.json();
-          funcSetItems(data.filter((product) => product.category !== 'electronics' && product !== 'electronics'));
-        } catch (error) {
-          console.error(errorMsj, error);
-        }
-      };
-
-      fetchData();
-    }, [url, funcSetItems, errorMsj]);
-  }
+        fetchData();
+        }, [url, funcSetItems, errorMsj]);
+    }
+    
     //Get Products
     useAPI(
         "https://fakestoreapi.com/products",
@@ -181,6 +182,7 @@ function Ecommerce() {
                         setCartOpen={setCartOpen}
                     />
                 )}
+            <Footer />
         </div>
     )
 }

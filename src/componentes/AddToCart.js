@@ -11,7 +11,7 @@ function AddToCart({ cart, isCartOpen, setCartOpen, setCart, totalProducts}) {
     const removeProduct = (productId, size) => {
         const updatedCart = cart.filter((product) => !(product.id === productId && product.size === size));
         setCart(updatedCart)
-    }
+    };
 
     // Subtracting a product
     const subtractProduct = (productId, size) => {
@@ -24,7 +24,7 @@ function AddToCart({ cart, isCartOpen, setCartOpen, setCart, totalProducts}) {
 
 
             setCart(updatedCart);
-      };
+    };
 
     // Adding a product
     const addProduct = (productId, size) => {
