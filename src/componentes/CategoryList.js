@@ -41,7 +41,7 @@ function CategoryList({
               </ul>
             </section>
             <section className='view-type--content'>
-              <h3>Vista</h3>
+              <h3>View</h3>
               <div className='view-type'>
                 <div
                   className={`icon-view ${displayInterface === 'interface#1' ? 'icon-view--active': ''}`} 

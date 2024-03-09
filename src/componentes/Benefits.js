@@ -29,7 +29,7 @@ function Benefits (){
     
     return (
         <section id="benefits" className="benefits">
-            <h2 className='benefits-title'>Our Benefits</h2>
+            <h2 className='title benefits-title'>Our Benefits</h2>
             <div className='our-benefits'>
             {benefitsList.map((benefit) => (
                 <article className='benefit-content' key={benefit.id}>

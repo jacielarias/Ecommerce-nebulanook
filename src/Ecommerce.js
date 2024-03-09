@@ -10,6 +10,7 @@ import Benefits from "./componentes/Benefits";
 import Slider from "./componentes/Slider";
 import Faqs from "./componentes/Faqs/FAQs";
 import Footer from "./componentes/Footer";
+import Form from './componentes/Form';
 
 
 function Ecommerce() {
@@ -174,14 +175,15 @@ function Ecommerce() {
             <Promotions />
             <Faqs />
             <Benefits />
-                {selectedProduct && (
-                    <ModalProduct
-                        selectedProduct={selectedProduct}
-                        onCloseModalProduct={() => setSelectedProduct(false)}
-                        addToCart={addToCart}
-                        setCartOpen={setCartOpen}
-                    />
-                )}
+            {selectedProduct && (
+                <ModalProduct
+                    selectedProduct={selectedProduct}
+                    onCloseModalProduct={() => setSelectedProduct(false)}
+                    addToCart={addToCart}
+                    setCartOpen={setCartOpen}
+                />
+            )}
+            <Form />
             <Footer />
         </div>
     )

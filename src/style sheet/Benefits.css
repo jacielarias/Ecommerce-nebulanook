@@ -7,20 +7,13 @@
     transition: transform 0.3s ease;
 }
 
-.benefits-title{
-    font-size: 5rem;
-    color: var(--secundary-color);
-    margin-bottom: 20px;
-    position: relative;
-}
-
 .benefits-title::after{
     content: '';
     position: absolute;
     width: 50px;
     height: 4px;
     bottom: 0;
-    left: 5px;
+    left: 3%;
     background-color: var(--beige-color);
 }
 

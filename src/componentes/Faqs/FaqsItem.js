@@ -13,7 +13,7 @@ function FaqsItem ({ num, title, curOpen, onOpen, children }) {
       onClick={openItem}
     >
       <p className="number">{num < 9 ? `0${num + 1}` : num + 1}</p>
-      <p className="title">{title}</p>
+      <p className="head">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
       <div
         className={`content-box ${isOpen ? 'content-box--active' : ''}`}

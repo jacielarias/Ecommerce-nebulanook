@@ -1,0 +1,45 @@
+@import url('General.css');
+
+.form-content{
+    width: 90%;
+    margin: auto;
+}
+
+.contact-title{
+    text-align: center;
+}
+form {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.name, .email{
+    height: 50px;
+}
+.text-area{
+    height: 300px;
+    padding-top: 10px;
+}
+.submit {
+    padding: 15px 45px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--beige-color);
+    font-size: 1rem;
+    margin-top: 40px;
+}
+.submit:hover {
+    background-color: var(--beige-color);
+}
