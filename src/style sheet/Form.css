@@ -22,6 +22,9 @@ label, input, textarea {
     font-size: 1.2rem;
     font-weight: 100;
 }
+.input{
+    color: #e7e7e7;
+}
 .name, .email{
     height: 50px;
 }

@@ -17,7 +17,7 @@ function CategoryList({
     return (
       <nav className='categories-navbar'>
         <section className='nav-content'>
-            <section >
+            <section className='cat-lits'>
               <h3 className='header-categories'>
                 Categories
               </h3>
@@ -59,7 +59,6 @@ function CategoryList({
                 </div>
               </div>
             </section>
-
         </section>
       </nav>
     );

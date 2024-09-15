@@ -1,4 +1,4 @@
-import '../style sheet/ProductList2.css';
+import '../style sheet/ProductList.css';
 import LazyLoadedImage from './LazyLoading';
 
 function Products2({ openModalProduct, filteredProducts, customClassName }) {
@@ -8,7 +8,7 @@ function Products2({ openModalProduct, filteredProducts, customClassName }) {
             <div className='content-cards--2'>
                 {filteredProducts.map((product) => (
                     <div className='card-product--2' key={product.id}>
-                        <div className='image-content--2' title={product.title}>
+                        <div className='image-content image_content_int_2' title={product.title}>
                             <p className='category-product--2'>
                                 {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                             </p>
@@ -19,7 +19,7 @@ function Products2({ openModalProduct, filteredProducts, customClassName }) {
                                 <h2 className='product-title--2' title='View details' onClick={() => openModalProduct(product)}> 
                                  {product.title} 
                                 </h2>
-                                <p className='desc-product-text'>{product.description}</p>
+                                <p className='desc-product-text'>{product.description.slice(0, 150) + '...'}</p>
                                 <div className='add-to-cart-content--2'>
                                     <p className='product-price--2'>${product.price} USD</p>
                                 </div>

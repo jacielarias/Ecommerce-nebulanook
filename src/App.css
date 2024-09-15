@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: 'Mona Sans';
   src: url('./fonts/Mona-Sans-Regular.ttf') format('truetype');
@@ -17,6 +18,30 @@ body {
   font-family: 'Mona Sans', sans-serif;
   color: var(--secundary-color);
   padding: 0;
+  margin: auto;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.main{
   margin: 0 auto;
 }
 
+
+.title{
+  padding: 10px 0;
+  font-size: 5em;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.title::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50px;
+  background-color: var(--beige-color);
+}

@@ -11,19 +11,19 @@ function Benefits (){
             id: 1, 
             urlIcon: benefit1,
             text: 'Free shipping',
-            description: 'Enjoy free shipping on U.S. orders over $100.'
+            description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper justo laoreet ligula tortor placerat gravida, curabitur purus hendrerit nascetur sapien.'
         },
         {
             id: 2, 
             urlIcon: benefit2,
             text: 'Home delivery',
-            description: 'Want hands-on plant expertise IRL? Stop by one of our stores in NYC, Bethesda, Chicago, or San Francisco to explore more plants, planters, & care accessories.'
+            description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper justo laoreet ligula tortor placerat gravida, curabitur purus hendrerit nascetur sapien.'
         },
         {
             id: 3, 
             urlIcon: benefit3,
             text: '1 month Guarantee',
-            description: 'Our team preps, prunes, & carefully packs every order—meaning lots of care goes into every step. If your plant arrives damaged or unhealthy, we replace it for free.'
+            description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper justo laoreet ligula tortor placerat gravida, curabitur purus hendrerit nascetur sapien.'
         }
     ];
     

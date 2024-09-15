@@ -10,7 +10,7 @@ function Products({ openModalProduct, filteredProducts, customClassName }) {
                 {filteredProducts.map((product) => (
                     <div className='card-product' key={product.id}>
 
-                        <div className='image-content' onClick={() => openModalProduct(product)}>
+                        <div className='image-content image_content_int_1' onClick={() => openModalProduct(product)}>
                             <p className='category-product'>
                                     {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                             </p>

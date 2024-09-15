@@ -22,7 +22,7 @@ function Promotions() {
         },
         {
             id: 3,
-            text: 'Lightweigt and Warm'
+            text: 'Lightweigt'
         }
     ];
 

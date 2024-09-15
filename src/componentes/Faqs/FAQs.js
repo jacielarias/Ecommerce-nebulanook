@@ -24,7 +24,7 @@ function Faqs () {
 
   return (
     <div id="faqs" className="FAQs-content">
-      l<LazyLoadedImage className={`image-faqs`} src={FAQsImage} alt='FAQs' />
+      <LazyLoadedImage className={`image-faqs`} src={FAQsImage} alt='FAQs' />
         <div className="FAQs-accordion-content"> 
           <h2 className="title">FAQs</h2>
           {faqs.map((item, i) => (

@@ -1,8 +1,8 @@
 //React
 import "./App.css";
-import "../src/style sheet/General.css"
+import "../src/style sheet/General.css";
 //Components
-import Ecommerce from './Ecommerce'
+import Ecommerce from './Ecommerce';
 
 //Ecommerce-App
 function App() {
@@ -12,6 +12,6 @@ function App() {
       <Ecommerce />
     </div>
   );
-}
+};
 
 export default App;

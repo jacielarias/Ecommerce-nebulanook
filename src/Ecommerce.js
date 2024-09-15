@@ -1,7 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+//API
+import { useAPI } from './API/API_Call';
+
 // Components
 import CategoryList from "./componentes/CategoryList";
 import Header from "./componentes/Header";
+import Search from './componentes/Search';
 import AddToCart from "./componentes/AddToCart";
 import ModalProduct from "./componentes/ModalProduct/ModalProduct";
 import ProductsInterface from "./componentes/ProductsInterface";
@@ -11,7 +16,6 @@ import Slider from "./componentes/Slider";
 import Faqs from "./componentes/Faqs/FAQs";
 import Footer from "./componentes/Footer";
 import Form from './componentes/Form';
-
 
 function Ecommerce() {
     //Display Products
@@ -32,38 +36,25 @@ function Ecommerce() {
     const [selectedProduct, setSelectedProduct] = useState(false);
     // Products Interface
     const [displayInterface, setDisplayInterface] = useState("interface#1");
-    //Consume API
-    async function useAPI(url, funcSetItems, errorMsj) {
-        useEffect(() => {
-        const fetchData = async () => {
-            try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data = await response.json();
-                funcSetItems(data.filter((product) => product.category !== 'electronics' && product !== 'electronics'));
-                    } catch (error) {
-                    console.error(errorMsj, error);
-                }
-            };
-
-        fetchData();
-        }, [url, funcSetItems, errorMsj]);
-    }
     
-    //Get Products
-    useAPI(
+    // Consumir API usando el hook personalizado
+    const { data: productsData } = useAPI(
         "https://fakestoreapi.com/products",
-        setProducts,
         "Error al obtener productos:"
     );
-    //Get Categories
-    useAPI(
+    const { data: categoriesData } = useAPI(
         "https://fakestoreapi.com/products/categories",
-        setCategories,
-        "Error al obtener categorias:"
+        "Error al obtener categorías:"
     );
+
+    // Asignar los datos una vez que la API responde
+    useEffect(() => {
+        setProducts(productsData.filter((product) => product.category !== 'electronics'));
+    }, [productsData]);
+
+    useEffect(() => {
+        setCategories(categoriesData);
+    }, [categoriesData]);
 
     const filteredProducts =
         selectedCategory === "All"
@@ -107,6 +98,8 @@ function Ecommerce() {
         setCart([...cart, { ...newItem, quantity: 1 }]);
         }
     };
+
+    
     // Display selected Category
     const manejarClick = (category) => {
         setSelectedCategory(category);
@@ -134,17 +127,20 @@ function Ecommerce() {
     }
     
     return (
-        <div>
+        <>
             <Header 
                 openCart={openCart} 
                 totalProducts={totalProducts} 
+                toggleInput={toggleInput}
+            />
+            <Search                 
                 setSearchInput={setSearchInput}
-                searchInput={searchInput}
-                search={search}
                 searcher={searcher}
                 toggleInput={toggleInput}
-                results={results}
                 openModalProduct={openModalProduct}
+                results={results}
+                searchInput={searchInput}
+                search={search}
             />
             <Slider />
             <AddToCart
@@ -185,7 +181,7 @@ function Ecommerce() {
             )}
             <Form />
             <Footer />
-        </div>
+            </>
     )
 }
 

@@ -20,16 +20,12 @@
 .our-benefits{
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    gap: 7em;
-    padding:  100px 0;
+    display: grid;
     justify-content: space-around;
     align-items: center;
-}
-
-.benefit-content {
-    width: 33.33%;
-    height: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 7em;
+    padding:  100px 0;
 }
 
 .benefit-content img{
@@ -47,4 +43,16 @@
    font-weight: 100;
    color: var(--category-color);
    font-weight: 0.9rem;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .benefits{
+        padding: 150px 0;
+        width: 85%;
+    }
+    .our-benefits{
+        padding: 0;
+        gap: 5em;
+    }
 }

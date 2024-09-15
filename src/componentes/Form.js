@@ -27,12 +27,13 @@ function Form (){
       };
 
     return (
-      <section className='form-content'>
+      <section id='contact' className='form-content'>
         <h2 className='title contact-title'>Contact</h2>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Nombre:</label>
+            <label htmlFor="name">Name:</label>
             <input
-                className='name'
+                className='name input'
+                placeholder='Write your name'
                 type="text"
                 id="name"
                 name="name"
@@ -41,9 +42,10 @@ function Form (){
                 required
             />
 
-            <label htmlFor="email">Correo Electrónico:</label>
+            <label htmlFor="email">Email address:</label>
             <input
-                className='email'
+                className='email input'
+                placeholder='Write your email address'
                 type="email"
                 id="email"
                 name="email"
@@ -52,9 +54,10 @@ function Form (){
                 required
             />
 
-            <label htmlFor="message">Mensaje:</label>
+            <label htmlFor="message">Message:</label>
             <textarea
-                className='text-area'
+                className='text-area input'
+                placeholder='Write a message'
                 id="message"
                 name="message"
                 rows="4"
